@@ -75,6 +75,12 @@
             android:id="@+id/brvah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/fragment"
+            android:text="碎片"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 
