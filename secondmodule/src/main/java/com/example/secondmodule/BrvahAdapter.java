@@ -1,7 +1,9 @@
 package com.example.secondmodule;
 
 import android.support.annotation.Nullable;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 
@@ -25,5 +27,12 @@ public class BrvahAdapter extends BaseQuickAdapter<InfosBean.NewsBean, BaseViewH
 
         helper.addOnClickListener(R.id.tv)
                 .addOnClickListener(R.id.tv1);
+
+        Glide.with(mContext)
+                .load(item.img)
+                .error(R.drawable.animation_img3)//加载出错的图片
+                .placeholder(R.mipmap.ic_launcher)//加载时候的图片
+                .transform(new GlideCircleTransform(mContext))//加载圆角
+                .into((ImageView) helper.getView(R.id.iv));
     }
 }
