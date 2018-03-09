@@ -11,17 +11,17 @@ import java.util.List;
  * Created by 艾德米 on 2018/3/8.
  */
 
-public class BrvahAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
+public class BrvahAdapter extends BaseQuickAdapter<InfosBean.NewsBean, BaseViewHolder> {
 
-    public BrvahAdapter(int layoutResId, @Nullable List<String> data) {
+    public BrvahAdapter(int layoutResId, List data) {
         super(layoutResId, data);
     }
 
-    @Override
-    protected void convert(BaseViewHolder helper, String item) {
 
-        helper.setText(R.id.tv, item)
-                .setText(R.id.tv1, item);
+    @Override
+    protected void convert(BaseViewHolder helper, InfosBean.NewsBean item) {
+        helper.setText(R.id.tv, item.title)
+                .setText(R.id.tv1, item.from);
 
         helper.addOnClickListener(R.id.tv)
                 .addOnClickListener(R.id.tv1);

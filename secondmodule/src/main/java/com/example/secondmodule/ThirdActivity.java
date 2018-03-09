@@ -40,7 +40,6 @@ public class ThirdActivity extends Activity implements SwipeRefreshLayout.OnRefr
             strings.add(String.valueOf(i));
         }
 
-
         mRecyclerView.setAdapter(new MyRvAdapter(strings));
     }
 
